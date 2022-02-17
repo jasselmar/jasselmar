@@ -41,7 +41,7 @@ const Canvas = (props) => {
 
       window.addEventListener('scroll', () => {
         const scrollTop = html.scrollTop
-        const maxScrollTop = html.scrollHeight - window.innerHeight
+        const maxScrollTop = html.scrollHeight - 0.5625 * width
         const scrollFraction = scrollTop / maxScrollTop
         const frameIndex = Math.min(
           frameCount - 1,
@@ -57,8 +57,12 @@ const Canvas = (props) => {
 
   return (
     <>
-      <canvas ref={canvasRef} {...props} height={height} width={width} />
-      {/* <img src="/../public/anima/0001.png" width="1920" height="1080" /> */}
+      <canvas
+        ref={canvasRef}
+        {...props}
+        height={0.5625 * width}
+        width={width}
+      />
     </>
   )
 }
