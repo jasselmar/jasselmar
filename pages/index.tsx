@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useEffect, useRef, useState } from 'react'
 import Canvas from '../components/Canvas'
 import Header from '../components/Header'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -10,34 +11,44 @@ export default function Home() {
       <div className="canvas-container">
         <Canvas />
       </div>
-      <div className="relative flex min-h-screen flex-col items-center justify-center py-2">
+      <div className="relative mt-[-450px] flex min-h-screen flex-col items-center justify-center py-2">
         <Head>
-          <title>Jassel</title>
+          <title>Jassel - Front End Developer</title>
 
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/jassel-favicon.png" />
         </Head>
 
-        <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-          <h1 className="text-6xl font-bold">
-            Welcome to{' '}
-            <a className="text-blue-600" href="https://nextjs.org">
-              Next.js!
-            </a>
-          </h1>
-
-          <p className="mt-3 text-2xl">
-            Get started by editing{' '}
-            <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-              pages/index.tsx
-            </code>
-          </p>
-
-          <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-            <a
-              href="https://nextjs.org/docs"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+        <main className="items-left flex w-full flex-1 flex-col justify-end px-24 text-left">
+          <AnimatePresence>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ y: -100, opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 1 }}
             >
-              <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+              <h1 className=" bg-clip-text text-5xl font-bold text-deepg  drop-shadow-xl ">
+                Front End Developer
+              </h1>
+
+              <p className="text-1xl mt-3 text-darkbrown ">
+                Looking for the balance between functionality and design.
+              </p>
+            </motion.div>
+          </AnimatePresence>
+          {/* <motion.div className="mt-3 flex w-5/12 space-x-3 ">
+              <div className="text-1xl w-fit rounded-full bg-redjm p-2 text-white drop-shadow-lg ">
+                JavaScript
+              </div>
+              <div className="text-1xl w-fit rounded-full bg-redjm p-2  text-white drop-shadow-lg ">
+                React Native
+              </div>
+              <div className="text-1xl w-fit rounded-full bg-redjm p-2  text-white drop-shadow-lg ">
+                React
+              </div>
+            </motion.div> */}
+
+          <div className="items-top mt-5 flex max-w-4xl flex-wrap justify-around bg-redjm sm:w-full">
+            <a href="https://nextjs.org/docs" className=" bg-white">
+              <h3 className="text-2xl font-bold">About &rarr;</h3>
 
               <p className="mt-4 text-xl">
                 Find in-depth information about Next.js features and API.
@@ -79,16 +90,8 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className="flex h-24 w-full items-center justify-center border-t">
-          <a
-            className="flex items-center justify-center"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
-          </a>
+        <footer className="flex h-24 w-full items-center justify-center text-white">
+          Made with 🤍 from 🇩🇴
         </footer>
       </div>
     </>
