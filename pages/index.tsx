@@ -60,7 +60,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ ease: 'easeIn', duration: 1 }}
+            transition={{ ease: 'easeIn', duration: 0.5 }}
             className=" grid h-fit w-full lg:mt-10 xl:h-screen"
           >
             <div className="pt-28 sm:grid sm:grid-cols-2 sm:pt-20 lg:pt-32 xl:grid-cols-3">
@@ -140,11 +140,13 @@ export default function Home() {
               <Card
                 title="Conversation Cards Game App"
                 description="React Native Expo Firebase Reanimated Gesture Handler"
+                url="https://github.com/jasselmar/hablemos-sf-app"
               />
               <div className="hidden lg:block "></div>
               <Card
                 title="Appointments App"
                 description="React Native Expo Firebase RN Calendars"
+                url="https://github.com/jasselmar/ibs-test"
               />
             </div>
           </motion.div>

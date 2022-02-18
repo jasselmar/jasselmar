@@ -12,6 +12,10 @@ const Canvas = (props) => {
     `/animation/${index.toString().padStart(4, 0)}.jpg`
 
   useEffect(() => {
+    for (let i = 1; i < frameCount; i++) {
+      const img = new Image()
+      img.src = currentFrame(i)
+    }
     const canvas = canvasRef.current
     setCanvas(canvas)
     const context = canvas.getContext('2d')

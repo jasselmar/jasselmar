@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Card = ({ title, description }) => {
+const Card = ({ title, description, url }) => {
   return (
     <div>
       <a
-        href="#"
+        href={url}
+        target="_blank"
         className="mt-5 flex space-y-5 rounded-md bg-whiteb p-4 drop-shadow-sm transition-all duration-300 hover:drop-shadow-2xl"
       >
         <div className=" flex w-3/4 flex-col justify-between  ">
@@ -13,7 +14,7 @@ const Card = ({ title, description }) => {
 
           <p className="text-sm text-darkbrown ">{description}</p>
 
-          <a href="#" className=" flex cursor-pointer  ">
+          <a href={url} target="_blank" className=" flex cursor-pointer  ">
             <svg
               width="24"
               height="24"
