@@ -11,14 +11,15 @@ const Canvas = (props) => {
   const currentFrame = (index) =>
     `/animation/${index.toString().padStart(4, 0)}.jpg`
 
-  useEffect(() => {
+  const preloadImgs = async () => {
     for (let i = 1; i < frameCount; i++) {
       const img = new Image()
       img.src = currentFrame(i)
     }
-  })
+  }
 
   useEffect(() => {
+    preloadImgs()
     const canvas = canvasRef.current
     setCanvas(canvas)
     const context = canvas.getContext('2d')
