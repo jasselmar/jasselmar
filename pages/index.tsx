@@ -18,21 +18,28 @@ export default function Home() {
       </Head>
       <Header />
       <Canvas className=" hidden xl:inline" />
-      <div className=" xl:hidden ">
-        <img
-          src="/images/0000.jpg"
-          width={width}
-          height={height}
-          className="h-screen object-cover "
-        />
-      </div>
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: 'easeIn', duration: 0.5 }}
+          className=" xl:hidden "
+        >
+          <img
+            src="/images/0000.jpg"
+            width={width}
+            height={height}
+            className="h-screen object-cover "
+          />
+        </motion.div>
+      </AnimatePresence>
       <div className="flex min-h-screen flex-col items-center justify-center pt-2 lg:relative">
         <main className="items-left flex w-full flex-1 flex-col justify-start px-5 text-left  lg:px-24">
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
-              animate={{ y: -100, opacity: 1 }}
-              transition={{ ease: 'easeOut', duration: 1 }}
+              whileInView={{ y: -100, opacity: 1 }}
+              transition={{ ease: 'easeIn', duration: 1 }}
               className="  mt-[-50px] text-center text-white sm:grid sm:grid-cols-2 sm:content-end sm:text-left xl:mt-[-250px] xl:flex xl:flex-col "
             >
               <h1
@@ -50,7 +57,12 @@ export default function Home() {
             </motion.div>
           </AnimatePresence>
 
-          <div className=" grid h-fit w-full  xl:h-screen">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: 'easeIn', duration: 1 }}
+            className=" grid h-fit w-full lg:mt-10 xl:h-screen"
+          >
             <div className="pt-28 sm:grid sm:grid-cols-2 sm:pt-20 lg:pt-32 xl:grid-cols-3">
               <div className="h-fit ">
                 <h2 className="text-3xl font-bold text-deepg">About</h2>
@@ -114,12 +126,16 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
-          <div
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: 'easeIn', duration: 1 }}
             id="projects"
             className=" my-20 flex flex-col justify-center xl:mt-[-250px] "
           >
-            <h2 className="text-3xl font-bold text-deepg">Projects</h2>
+            <h2 className="text-3xl font-bold text-deepg lg:mt-10">Projects</h2>
             <div className=" grid w-full xl:grid-cols-3 ">
               <Card
                 title="Conversation Cards Game App"
@@ -131,7 +147,7 @@ export default function Home() {
                 description="React Native Expo Firebase RN Calendars"
               />
             </div>
-          </div>
+          </motion.div>
         </main>
 
         <footer className="hidden h-24 w-full items-center justify-center text-center text-white xl:flex">
