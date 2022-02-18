@@ -16,6 +16,9 @@ const Canvas = (props) => {
       const img = new Image()
       img.src = currentFrame(i)
     }
+  })
+
+  useEffect(() => {
     const canvas = canvasRef.current
     setCanvas(canvas)
     const context = canvas.getContext('2d')
