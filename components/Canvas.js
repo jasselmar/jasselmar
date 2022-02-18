@@ -34,21 +34,21 @@ const Canvas = (props) => {
         context.drawImage(img, 0, 0, width, 0.5625 * width)
       }
 
-      const updateImage = (index) => {
+      const updateImage = async (index) => {
         img.src = currentFrame(index)
-        context.drawImage(img, 0, 0, width, 0.5625 * width)
+        await context.drawImage(img, 0, 0, width, 0.5625 * width)
       }
 
-      window.addEventListener('scroll', () => {
+      window.addEventListener('scroll', async () => {
         const scrollTop = html.scrollTop
         const maxScrollTop = html.scrollHeight - 0.5625 * width
         const scrollFraction = scrollTop / maxScrollTop
-        const frameIndex = Math.min(
+        const frameIndex = await Math.min(
           frameCount - 1,
           Math.ceil(scrollFraction * frameCount)
         )
 
-        requestAnimationFrame(() => updateImage(frameIndex + 1))
+        requestAnimationFrame(async () => await updateImage(frameIndex + 1))
       })
     }
   }, [width])
