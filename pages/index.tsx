@@ -9,6 +9,7 @@ import { useWindowSize } from '../hooks/useWindowSize'
 
 export default function Home() {
   const { width, height } = useWindowSize()
+  console.log(width)
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/jassel-favicon.png" />
       </Head>
       <Header />
-      <Canvas className=" hidden xl:inline" />
+      {width >= 1024 ? <Canvas className=" hidden xl:inline" /> : null}
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0 }}
