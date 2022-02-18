@@ -34,9 +34,9 @@ const Canvas = (props) => {
         context.drawImage(img, 0, 0, width, 0.5625 * width)
       }
 
-      const updateImage = (index) => {
+      const updateImage = async (index) => {
         img.src = currentFrame(index)
-        context.drawImage(img, 0, 0, width, 0.5625 * width)
+        await context.drawImage(img, 0, 0, width, 0.5625 * width)
       }
 
       window.addEventListener('scroll', () => {
