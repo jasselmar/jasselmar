@@ -89,6 +89,14 @@ export default function Home() {
                   |{' '}
                   <a href="/JM.CV.M.pdf" className="underline" target="_blank">
                     resume
+                  </a>{' '}
+                  |{' '}
+                  <a
+                    href="https://github.com/jasselmar"
+                    className="underline"
+                    target="_blank"
+                  >
+                    github
                   </a>
                 </p>
                 <div className="my-4">
@@ -142,12 +150,14 @@ export default function Home() {
                 title="Conversation Cards Game App"
                 description="React Native Expo Firebase Reanimated Gesture Handler"
                 url="https://github.com/jasselmar/hablemos-sf-app"
+                mockup="/images/hablemos-sf-app.jpg"
               />
               <div className="hidden lg:block "></div>
               <Card
                 title="Appointments App"
                 description="React Native Expo Firebase RN Calendars"
                 url="https://github.com/jasselmar/ibs-test"
+                mockup="/images/appointments-app.jpg"
               />
             </div>
           </motion.div>

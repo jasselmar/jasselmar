@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Card = ({ title, description, url }) => {
+const Card = ({ title, description, url, mockup }) => {
   return (
     <div>
       <a
@@ -32,7 +32,7 @@ const Card = ({ title, description, url }) => {
         </div>
         <div className=" ">
           <Image
-            src="/images/hablemos-sf-app.jpg"
+            src={mockup}
             width={150}
             height={150}
             className=" rounded-lg "
