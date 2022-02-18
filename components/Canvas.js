@@ -11,14 +11,15 @@ const Canvas = (props) => {
   const currentFrame = (index) =>
     `/animation/${index.toString().padStart(4, 0)}.jpg`
 
-  useEffect(() => {
+  const preloadImgs = async () => {
     for (let i = 1; i < frameCount; i++) {
       const img = new Image()
       img.src = currentFrame(i)
     }
-  })
+  }
 
   useEffect(() => {
+    preloadImgs()
     const canvas = canvasRef.current
     setCanvas(canvas)
     const context = canvas.getContext('2d')
@@ -39,7 +40,8 @@ const Canvas = (props) => {
         await context.drawImage(img, 0, 0, width, 0.5625 * width)
       }
 
-      window.addEventListener('scroll', () => {
+      window.addEventListener('scroll', async () => {
+        await preloadImgs()
         const scrollTop = html.scrollTop
         const maxScrollTop = html.scrollHeight - 0.5625 * width
         const scrollFraction = scrollTop / maxScrollTop
