@@ -2,21 +2,31 @@ import React from 'react'
 
 function Header() {
   return (
-    <div className=" fixed z-20 mt-5 flex h-16 w-full place-content-between items-center  rounded-md px-24">
-      <div>
-        <h1 className="text-2xl font-bold text-brownjm">Hi, I'm Jassel</h1>
+    <div className=" fixed  z-20 flex h-20 w-full flex-wrap items-center rounded-md py-1   px-5 backdrop-blur-sm md:h-16 md:place-content-between md:py-12 lg:px-24 ">
+      <div className="  w-full text-center md:w-fit md:text-left ">
+        <h1 className="mb-[-15px] text-2xl font-bold text-brownjm md:mb-0 ">
+          Jassel
+        </h1>
       </div>
-      <div className="flex-row space-x-10">
-        <a href="#" className="text-lg font-medium text-brownjm ">
-          top
-        </a>
-        <a href="#" className="text-lg font-medium text-brownjm ">
+      <div className="mt-3 flex w-full flex-row justify-center space-x-5 text-center md:mt-0 md:w-fit md:space-x-10">
+        <a href="#about" className="text-lg font-medium text-brownjm ">
           about
         </a>
-        <a href="#" className="text-lg font-medium text-brownjm ">
+        <a href="#projects" className="text-lg font-medium text-brownjm ">
           projects
         </a>
-        <a href="#" className="text-lg font-medium text-brownjm ">
+        <a
+          href="/JM.CV.M.pdf"
+          target="_blank"
+          className="text-lg font-medium text-brownjm "
+        >
+          resume
+        </a>
+        <a
+          href="mailto:jjasselmartinez@gmail.com"
+          target="_blank"
+          className="text-lg font-medium text-brownjm "
+        >
           contact
         </a>
       </div>

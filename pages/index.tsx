@@ -3,95 +3,142 @@ import { useEffect, useRef, useState } from 'react'
 import Canvas from '../components/Canvas'
 import Header from '../components/Header'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
+import Card from '../components/Card'
+import { useWindowSize } from '../hooks/useWindowSize'
 
 export default function Home() {
+  const { width, height } = useWindowSize()
   return (
     <>
+      <Head>
+        <title>Jassel - Front End Developer</title>
+
+        <link rel="icon" href="/jassel-favicon.png" />
+      </Head>
       <Header />
-      <div className="canvas-container">
-        <Canvas />
+      <Canvas className=" hidden xl:inline" />
+      <div className=" xl:hidden ">
+        <img
+          src="/images/0000.jpg"
+          width={width}
+          height={height}
+          className="h-screen object-cover "
+        />
       </div>
-      <div className="relative mt-[-450px] flex min-h-screen flex-col items-center justify-center py-2">
-        <Head>
-          <title>Jassel - Front End Developer</title>
-
-          <link rel="icon" href="/jassel-favicon.png" />
-        </Head>
-
-        <main className="items-left flex w-full flex-1 flex-col justify-end px-24 text-left">
+      <div className="flex min-h-screen flex-col items-center justify-center pt-2 lg:relative">
+        <main className="items-left flex w-full flex-1 flex-col justify-start px-5 text-left  lg:px-24">
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ y: -100, opacity: 1 }}
               transition={{ ease: 'easeOut', duration: 1 }}
+              className="  mt-[-50px] text-center text-white sm:grid sm:grid-cols-2 sm:content-end sm:text-left xl:mt-[-250px] xl:flex xl:flex-col "
             >
-              <h1 className=" bg-clip-text text-5xl font-bold text-deepg  drop-shadow-xl ">
+              <h1
+                id="about"
+                className=" text-lg font-bold drop-shadow-xl sm:text-deepg lg:text-xl xl:text-5xl "
+              >
                 Front End Developer
               </h1>
-
-              <p className="text-1xl mt-3 text-darkbrown ">
+              <p className=" hidden text-base text-darkbrown lg:mt-2 lg:text-lg xl:block ">
                 Looking for the balance between functionality and design.
+              </p>
+              <p className=" sm:text-md block text-sm sm:text-right  sm:text-darkbrown xl:hidden ">
+                Functionality and design.
               </p>
             </motion.div>
           </AnimatePresence>
-          {/* <motion.div className="mt-3 flex w-5/12 space-x-3 ">
-              <div className="text-1xl w-fit rounded-full bg-redjm p-2 text-white drop-shadow-lg ">
-                JavaScript
+
+          <div className=" grid h-fit w-full  xl:h-screen">
+            <div className="pt-28 sm:grid sm:grid-cols-2 sm:pt-20 lg:pt-32 xl:grid-cols-3">
+              <div className="h-fit ">
+                <h2 className="text-3xl font-bold text-deepg">About</h2>
+                <p className="mt-4 mr-5 text-justify text-darkbrown ">
+                  Hi, I'm Jorge J. Martínez from Dominican Republic🇩🇴. I
+                  consider myself curiosity-driven person passionated about
+                  mobile development and creating things that live on the
+                  internet.
+                </p>
+
+                <p className="mt-4 text-darkbrown ">
+                  I'm currently looking for new opportunities.
+                </p>
+
+                <p className="mt-4 text-darkbrown ">
+                  <a
+                    href="mailto:jjasselmartinez@gmail.com"
+                    className="underline"
+                    target="_blank"
+                  >
+                    contact
+                  </a>{' '}
+                  |{' '}
+                  <a href="/JM.CV.M.pdf" className="underline" target="_blank">
+                    resume
+                  </a>
+                </p>
+                <div className="my-4">
+                  <motion.div className=" mt-3 flex flex-wrap space-x-2">
+                    <div className="mt-1 w-fit rounded-full bg-redjm p-2 text-sm text-white drop-shadow-lg ">
+                      JavaScript
+                    </div>
+                    <div className="mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      React Native
+                    </div>
+                    <div className="mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      React
+                    </div>
+                    <div className="mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      HTML/CSS
+                    </div>
+                    <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      Expo
+                    </div>
+                    <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      Git
+                    </div>
+                    <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      Next.js
+                    </div>
+                  </motion.div>
+                </div>
               </div>
-              <div className="text-1xl w-fit rounded-full bg-redjm p-2  text-white drop-shadow-lg ">
-                React Native
+              <div className=" hidden text-center xl:block"></div>
+              <div className=" mt-10 h-fit  rounded-xl px-0 text-center sm:mt-0 sm:text-right ">
+                <Image
+                  src="/images/me.jpg"
+                  className="rounded-xl drop-shadow-2xl "
+                  height={350}
+                  width={281.36}
+                />
               </div>
-              <div className="text-1xl w-fit rounded-full bg-redjm p-2  text-white drop-shadow-lg ">
-                React
-              </div>
-            </motion.div> */}
-
-          <div className="items-top mt-5 flex max-w-4xl flex-wrap justify-around bg-redjm sm:w-full">
-            <a href="https://nextjs.org/docs" className=" bg-white">
-              <h3 className="text-2xl font-bold">About &rarr;</h3>
-
-              <p className="mt-4 text-xl">
-                Find in-depth information about Next.js features and API.
-              </p>
-            </a>
-
-            <a
-              href="https://nextjs.org/learn"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-
-              <p className="mt-4 text-xl">
-                Learn about Next.js in an interactive course with quizzes!
-              </p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/canary/examples"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-
-              <p className="mt-4 text-xl">
-                Discover and deploy boilerplate example Next.js projects.
-              </p>
-            </a>
-
-            <a
-              href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-
-              <p className="mt-4 text-xl">
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
+            </div>
+          </div>
+          <div
+            id="projects"
+            className=" my-20 flex flex-col justify-center xl:mt-[-250px] "
+          >
+            <h2 className="text-3xl font-bold text-deepg">Projects</h2>
+            <div className=" grid w-full xl:grid-cols-3 ">
+              <Card
+                title="Conversation Cards Game App"
+                description="React Native Expo Firebase Reanimated Gesture Handler"
+              />
+              <div className="hidden lg:block "></div>
+              <Card
+                title="Appointments App"
+                description="React Native Expo Firebase RN Calendars"
+              />
+            </div>
           </div>
         </main>
 
-        <footer className="flex h-24 w-full items-center justify-center text-white">
-          Made with 🤍 from 🇩🇴
+        <footer className="hidden h-24 w-full items-center justify-center text-center text-white xl:flex">
+          Made with 🤍<br></br> from 🇩🇴
+        </footer>
+        <footer className="block h-24 w-full items-center justify-center text-center text-darkbrown xl:hidden">
+          Made with ❤️ from 🇩🇴
         </footer>
       </div>
     </>

@@ -12,6 +12,8 @@ module.exports = {
         greyjm: '#E1E1E1',
         deepg: '#095256',
         gains: '#E1E1E1',
+        imsg: '#0a7efe',
+        whiteb: '#e2e2e2',
       },
     },
   },

@@ -7,16 +7,9 @@ const Canvas = (props) => {
   const [canvas, setCanvas] = useState()
   const [context, setContext] = useState()
 
-  const frameCount = 80
+  const frameCount = 140
   const currentFrame = (index) =>
-    `/anima/${index.toString().padStart(4, 0)}.png`
-
-  /*  const preloadImages = () => {
-    for (let i = 1; i < frameCount; i++) {
-      const img = new Image()
-      img.src = currentFrame(i)
-    }
-  } */
+    `/animation/${index.toString().padStart(4, 0)}.jpg`
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -53,17 +46,15 @@ const Canvas = (props) => {
     }
   }, [width])
 
-  /*  preloadImages() */
-
   return (
-    <>
+    <div className="canvas-container">
       <canvas
         ref={canvasRef}
         {...props}
         height={0.5625 * width}
         width={width}
       />
-    </>
+    </div>
   )
 }
 
