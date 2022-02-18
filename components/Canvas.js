@@ -48,7 +48,7 @@ const Canvas = (props) => {
           Math.ceil(scrollFraction * frameCount)
         )
 
-        requestAnimationFrame(() => updateImage(frameIndex + 1))
+        requestAnimationFrame(async () => await updateImage(frameIndex + 1))
       })
     }
   }, [width])

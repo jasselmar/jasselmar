@@ -152,7 +152,7 @@ export default function Home() {
           </motion.div>
         </main>
 
-        <footer className="hidden h-24 w-full items-center justify-center text-center text-white xl:flex">
+        <footer className="hidden h-24 w-full items-center justify-center pb-5 text-center text-white xl:flex">
           Made with 🤍<br></br> from 🇩🇴
         </footer>
         <footer className="block h-24 w-full items-center justify-center text-center text-darkbrown xl:hidden">
