@@ -41,10 +41,11 @@ const Canvas = (props) => {
       }
 
       window.addEventListener('scroll', async () => {
+        await preloadImgs()
         const scrollTop = html.scrollTop
         const maxScrollTop = html.scrollHeight - 0.5625 * width
         const scrollFraction = scrollTop / maxScrollTop
-        const frameIndex = await Math.min(
+        const frameIndex = Math.min(
           frameCount - 1,
           Math.ceil(scrollFraction * frameCount)
         )
