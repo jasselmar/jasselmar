@@ -9,11 +9,10 @@ import { useWindowSize } from '../hooks/useWindowSize'
 
 export default function Home() {
   const { width, height } = useWindowSize()
-  console.log(width)
   return (
     <>
       <Head>
-        <title>Jassel - Front End Developer</title>
+        <title>Jorge - Front End Developer</title>
 
         <link rel="icon" href="/jassel-favicon.png" />
       </Head>
