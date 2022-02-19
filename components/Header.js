@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Scrollchor } from 'react-scrollchor'
 function Header() {
   return (
     <div className=" fixed  z-20 flex h-20 w-full flex-wrap items-center rounded-md py-1   px-5 backdrop-blur-sm md:h-16 md:place-content-between md:py-12 lg:px-24 ">
@@ -9,12 +9,16 @@ function Header() {
         </h1>
       </div>
       <div className="mt-3 flex w-full flex-row justify-center space-x-5 text-center md:mt-0 md:w-fit md:space-x-10">
-        <a href="#about" className="text-lg font-medium text-brownjm ">
+        <Scrollchor to="#about" className="text-lg font-medium text-brownjm ">
           about
-        </a>
-        <a href="#projects" className="text-lg font-medium text-brownjm ">
+        </Scrollchor>
+        <Scrollchor
+          to="#projects"
+          className="text-lg font-medium text-brownjm "
+        >
           projects
-        </a>
+        </Scrollchor>
+
         <a
           href="/JM.CV.M.pdf"
           target="_blank"
