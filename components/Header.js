@@ -27,7 +27,7 @@ function Header() {
           resume
         </a>
         <a
-          href="mailto:jjasselmartinez@gmail.com"
+          href="mailto:contact@jorgemar.me"
           target="_blank"
           className="text-lg font-medium text-brownjm "
         >
