@@ -143,7 +143,9 @@ export default function Home() {
             id="projects"
             className=" my-20 flex flex-col justify-center xl:mt-[-250px] "
           >
-            <h2 className="text-3xl font-bold text-deepg lg:mt-10">Projects</h2>
+            <h2 className="text-3xl font-bold text-deepg lg:mt-10">
+              Mobile Apps
+            </h2>
             <div className=" grid w-full xl:grid-cols-3 ">
               <Card
                 title="Conversation Cards Game App"
