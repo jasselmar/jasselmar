@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Card from '../components/Card'
 import { useWindowSize } from '../hooks/useWindowSize'
+import WebsitesCard from '../components/WebsitesCard'
 
 export default function Home() {
   const { width, height } = useWindowSize()
@@ -135,7 +136,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -158,6 +158,75 @@ export default function Home() {
                 url="https://github.com/jasselmar/ibs-test"
                 mockup="/images/appointments-app.jpg"
               />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: 'easeIn', duration: 1 }}
+            id="websites"
+            className=" my-20 mt-[-25px] flex flex-col justify-center "
+          >
+            <div className="flex flex-row items-center lg:mt-10">
+              <a href="/websites">
+                <h2 className="text-3xl font-bold text-deepg ">Websites</h2>
+              </a>
+              <a
+                href="/websites"
+                className="mx-2 rounded-full border border-deepg px-2.5 py-1 text-base transition-all duration-300 hover:bg-deepg hover:text-white"
+              >
+                view more
+              </a>
+            </div>
+            <div className=" grid w-full xl:grid-cols-3 ">
+              <a
+                href="https://www.lulamola.com"
+                target="_blank"
+                className="mt-5 flex space-y-5 rounded-md bg-whiteb p-4 drop-shadow-sm transition-all duration-300 hover:drop-shadow-2xl"
+              >
+                <div className=" flex w-3/4 flex-col justify-center  ">
+                  <h3 className="text-2xl font-medium text-darkbrown ">
+                    Lulamola
+                  </h3>
+
+                  <p className=" my-6 text-sm text-darkbrown ">
+                    E-commerce built with WordPress, Elementor, Woocommerce.
+                  </p>
+                </div>
+                <div className=" ">
+                  <Image
+                    src="/images/website-lulamola.png"
+                    width={150}
+                    height={113}
+                    className=" rounded-lg "
+                  />
+                </div>
+              </a>
+              <div className="hidden lg:block "></div>
+              <a
+                href="https://cigeh.adoarh.org/"
+                target="_blank"
+                className="mt-5 flex space-y-5 rounded-md bg-whiteb p-4 drop-shadow-sm transition-all duration-300 hover:drop-shadow-2xl"
+              >
+                <div className=" flex w-3/4 flex-col justify-center  ">
+                  <h3 className="text-2xl font-medium text-darkbrown ">
+                    Cigeh
+                  </h3>
+
+                  <p className=" my-6 text-sm text-darkbrown ">
+                    Website built with WordPress and Elementor.
+                  </p>
+                </div>
+                <div className=" ">
+                  <Image
+                    src="/images/website-cigeh.jpg"
+                    width={150}
+                    height={113}
+                    className=" rounded-lg "
+                  />
+                </div>
+              </a>
             </div>
           </motion.div>
         </main>
