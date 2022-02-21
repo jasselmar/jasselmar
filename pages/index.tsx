@@ -68,9 +68,9 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-deepg">About</h2>
                 <p className="mt-4 mr-5 text-justify text-darkbrown ">
                   Hi, I'm Jorge J. Martínez from Dominican Republic🇩🇴. I
-                  consider myself curiosity-driven person passionate about
-                  mobile development and creating things that live on the
-                  internet.
+                  consider myself curiosity-driven person passionate about{' '}
+                  <a className="font-bold">mobile and web development</a>,
+                  basically creating things that live on the internet.
                 </p>
 
                 <p className="mt-4 text-darkbrown ">
