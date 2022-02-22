@@ -198,7 +198,7 @@ export default function Home() {
                     Lulamola
                   </h3>
 
-                  <p className=" my-6 text-sm text-darkbrown ">
+                  <p className=" my-6 pr-4 text-sm text-darkbrown">
                     E-commerce with custom design for an online shop based in
                     Dominican Republic.
                   </p>
