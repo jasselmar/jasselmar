@@ -117,6 +117,12 @@ export default function Home() {
                       Expo
                     </div>
                     <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      Redux
+                    </div>
+                    <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
+                      GraphQL
+                    </div>
+                    <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
                       Git
                     </div>
                     <div className=" mt-1 w-fit rounded-full bg-redjm p-2 text-sm  text-white drop-shadow-lg ">
