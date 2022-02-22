@@ -176,7 +176,7 @@ export default function Home() {
               </a>
               <a
                 href="/websites"
-                className="mx-2 rounded-full border border-deepg px-2.5 py-1 text-base transition-all duration-300 hover:bg-deepg hover:text-white"
+                className="mx-2 rounded-full border border-deepg px-2.5 py-1 text-base text-deepg transition-all duration-300 hover:bg-deepg hover:text-white"
               >
                 view more
               </a>
