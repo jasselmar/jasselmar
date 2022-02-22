@@ -22,37 +22,37 @@ export default function Websites() {
             image="/images/website-lulamola.png"
             url="https://www.lulamola.com"
             name="Lulamola"
-            description="E-commerce built with WordPress, Elementor, Woocommerce."
-          />
-          <WebsitesCard
-            image="/images/website-cigeh.jpg"
-            url="https://cigeh.adoarh.org/"
-            name="Cigeh"
-            description="Website built with WordPress and Elementor."
-          />
-          <WebsitesCard
-            image="/images/website-sorijiet.jpg"
-            url="https://sorijiet.com/"
-            name="Sorijiet"
-            description="E-commerce built with WordPress, Elementor and Woocommerce."
+            description="Basic E-commerce with custom design for an online shop based in Dominican Republic."
           />
           <WebsitesCard
             image="/images/website-greentech.jpg"
             url="https://ev-greentech.com/"
             name="Greentech"
-            description="Website built with WordPress, Elementor and Woocommerce."
+            description="Bilingual website for a worldwide company."
           />
           <WebsitesCard
             image="/images/website-proxilis.jpg"
             url="https://proxilis.ch/"
             name="Proxilis"
-            description="Website built with WordPress and Elementor."
+            description="Website for a Swiss based laboratory."
+          />
+          <WebsitesCard
+            image="/images/website-cigeh.jpg"
+            url="https://cigeh.adoarh.org/"
+            name="Cigeh"
+            description="Landing page for an event in Dominican Republic."
+          />
+          <WebsitesCard
+            image="/images/website-sorijiet.jpg"
+            url="https://sorijiet.com/"
+            name="Sorijiet"
+            description="Basic E-commerce with custom design for a beauty salon in Dominican Republic."
           />
           <WebsitesCard
             image="/images/website-immobat.jpg"
             url="https://immobat-elec.fr/"
             name="Immobat"
-            description="Website built with WordPress and Elementor."
+            description="Website for a french company."
           />
         </main>
 

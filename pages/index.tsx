@@ -193,7 +193,7 @@ export default function Home() {
                   </h3>
 
                   <p className=" my-6 text-sm text-darkbrown ">
-                    E-commerce built with WordPress, Elementor, Woocommerce.
+                    Basic E-commerce with custom design.
                   </p>
                 </div>
                 <div className=" ">
@@ -217,7 +217,7 @@ export default function Home() {
                   </h3>
 
                   <p className=" my-6 text-sm text-darkbrown ">
-                    Website built with WordPress and Elementor.
+                    Landing page for an event.
                   </p>
                 </div>
                 <div className=" ">
