@@ -22,7 +22,7 @@ export default function Websites() {
             image="/images/website-lulamola.png"
             url="https://www.lulamola.com"
             name="Lulamola"
-            description="Basic E-commerce with custom design for an online shop based in Dominican Republic."
+            description="E-commerce with custom design for an online shop based in Dominican Republic."
           />
           <WebsitesCard
             image="/images/website-greentech.jpg"

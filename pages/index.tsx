@@ -193,7 +193,8 @@ export default function Home() {
                   </h3>
 
                   <p className=" my-6 text-sm text-darkbrown ">
-                    Basic E-commerce with custom design.
+                    E-commerce with custom design for an online shop based in
+                    Dominican Republic.
                   </p>
                 </div>
                 <div className=" ">
@@ -207,22 +208,22 @@ export default function Home() {
               </a>
               <div className="hidden lg:block "></div>
               <a
-                href="https://cigeh.adoarh.org/"
+                href="https://ev-greentech.com/"
                 target="_blank"
                 className="mt-5 flex space-y-5 rounded-md bg-whiteb p-4 drop-shadow-sm transition-all duration-300 hover:drop-shadow-2xl"
               >
                 <div className=" flex w-3/4 flex-col justify-center  ">
                   <h3 className="text-2xl font-medium text-darkbrown ">
-                    Cigeh
+                    Greentech
                   </h3>
 
                   <p className=" my-6 text-sm text-darkbrown ">
-                    Landing page for an event.
+                    Bilingual website for a worldwide company.
                   </p>
                 </div>
                 <div className=" ">
                   <Image
-                    src="/images/website-cigeh.jpg"
+                    src="/images/website-greentech.jpg"
                     width={150}
                     height={113}
                     className=" rounded-lg "
