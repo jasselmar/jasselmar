@@ -223,7 +223,7 @@ export default function Home() {
                     Greentech
                   </h3>
 
-                  <p className=" my-6 text-sm text-darkbrown ">
+                  <p className=" my-6 pr-4 text-sm text-darkbrown ">
                     Bilingual website for a worldwide company.
                   </p>
                 </div>
