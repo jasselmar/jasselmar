@@ -68,26 +68,22 @@ export default function Home() {
               <div className="h-fit ">
                 <h2 className="text-3xl font-bold text-deepg">About</h2>
                 <p className="mt-4 mr-5 text-justify text-darkbrown ">
-                  Hi, I'm Jorge J. Martínez from Dominican Republic🇩🇴. I
+                  Hi, I'm Jorge J. Martinez from Dominican Republic🇩🇴. I
                   consider myself curiosity-driven person passionate about{' '}
                   <a className="font-bold">mobile and web development</a>,
                   basically creating things that live on the internet.
                 </p>
 
                 <p className="mt-4 text-darkbrown ">
-                  I'm currently looking for new opportunities.
-                </p>
-
-                <p className="mt-4 text-darkbrown ">
                   <a
-                    href="mailto:jjasselmartinez@gmail.com"
+                    href="mailto:contact@jorgemar.me"
                     className="underline"
                     target="_blank"
                   >
                     contact
                   </a>{' '}
                   |{' '}
-                  <a href="/JM.CV.M.pdf" className="underline" target="_blank">
+                  <a href="/JM.CV.ML.pdf" className="underline" target="_blank">
                     resume
                   </a>{' '}
                   |{' '}

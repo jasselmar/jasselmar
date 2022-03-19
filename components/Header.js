@@ -29,7 +29,7 @@ function Header() {
         </a>
 
         <a
-          href="/JM.CV.M.pdf"
+          href="/JM.CV.ML.pdf"
           className="text-lg font-medium text-brownjm"
           target="_blank"
         >
