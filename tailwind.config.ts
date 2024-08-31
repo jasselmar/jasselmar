@@ -15,6 +15,9 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "touch": {"raw": '(hover: none)'},
+        "tablet": "1024px", // Adjust this
+        "xs": "480px",
       },
     },
     extend: {
@@ -85,7 +88,9 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), function({ addVariant }) {
+    addVariant('touch', '@media (hover: none) { &:active }')
+  } ],
 } satisfies Config
 
 export default config
