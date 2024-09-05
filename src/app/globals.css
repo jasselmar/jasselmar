@@ -66,6 +66,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  html, body {
+    cursor: default;
+  }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"], input[type="reset"] {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {

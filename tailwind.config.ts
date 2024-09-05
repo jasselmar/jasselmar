@@ -14,13 +14,15 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
-        "touch": {"raw": '(hover: none)'},
-        "tablet": "1024px", // Adjust this
-        "xs": "480px",
+        "2xl": "1400px"
       },
     },
     extend: {
+      screens: {
+        tablet: "1024px",
+        mobilel: "425px",
+        xs: "320px",
+      },
       fontFamily: {
         circularBlack: ['var(--font-circularBlack)'],
         circularBold: ['var(--font-circularBold)'],
