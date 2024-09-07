@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeftIcon } from 'lucide-react';
-import { lato, circularBlack, circularBold, circular } from "@/app/utils/fonts";
+import { lato, circularBold, circular } from "@/app/utils/fonts";
 import Header from "@/components/Header";
 import { FlipWords } from '@/components/ui/flip-words';
 
@@ -24,8 +24,11 @@ export default function HSFApp() {
             </div>
 
             <div className="relative px-1.5 py-3 ">
-              <div className='flex md:flex-row flex-col-reverse md:items-center gap-5 mb-8' >
-                <h1 className={`${circularBold.className} text-4xl text-orange-50`}>Hablemos Sin Filtro</h1>
+              <Link href="/" passHref>
+                <ArrowLeftIcon className='text-orange-50 mb-10  w-8 h-8 mr-[0.15rem] group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' />
+              </Link>
+              <div className='flex flex-row items-center gap-5 mb-8' >
+                <h1 className={`${circularBold.className} sm:text-4xl text-3xl text-orange-50`}>Hablemos Sin Filtro</h1>
                 <Image src="/images/hsfp-app-icon.svg" alt="HSF App Icon" className='hover:scale-[105%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={30} height={30} />
               </div>
               

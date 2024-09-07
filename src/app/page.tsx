@@ -1,45 +1,20 @@
 "use client";
 
 import React from 'react';
-import { lato, circularBlack, circularBold, circular } from "@/app/utils/fonts";
+import { lato, circular } from "@/app/utils/fonts";
 import Header from "../components/Header";
 import Image from "next/image";
 import TechnologiesList from '@/components/TechnologiesList';
-import { Button } from '@/components/ui/button';
-import { ArrowRightIcon } from 'lucide-react';
-import Link from 'next/link';
-
-const cards = [
-  { question: '¿Cual es el viaje de tus sueños?', style: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-0' },
-  { question: '¿Quién te ha ofrecido el mejor consejo profesional?', style: 'top-[40%] left-[40%] -translate-x-1/2 -translate-y-1/2 rotate-[30deg]' },
-  { question: '¿Cómo diferenciar el amor de la dependencia emocional?', style: 'top-[60%] left-[60%] -translate-x-1/2 -translate-y-1/2 rotate-[-45deg]' },
-  { question: '¿Cuál ha sido tu mayor aprendizaje este año?', style: 'top-[20%] left-[60%] -translate-x-1/2 -translate-y-1/2 rotate-[-60deg]' },
-  { question: '¿Qué harías si la persona con quien te casas le diagnostican Alzheimer?', style: 'top-[70%] left-[35%] -translate-x-1/2 -translate-y-1/2 rotate-[75deg]' },
-  { question: '¿Cuál es tu mayor miedo en la vida?', style: 'top-[25%] left-[45%] -translate-x-1/2 -translate-y-1/2 rotate-[-200deg]' },
-  { question: '¿Qué cambiarías de tu pasado si pudieras?', style: 'top-[75%] left-[55%] -translate-x-1/2 -translate-y-1/2 rotate-[50deg]' },
-  { question: '¿Cómo te gustaría que te recordaran?', style: 'top-[50%] left-[70%] -translate-x-1/2 -translate-y-1/2 rotate-[-25deg]' },
-];
+import ProjectItem from '@/components/ProjectItem';
 
 export default function Home() {
   return (
     <>
     <Header />
     <main className="flex min-h-screen flex-col items-center justify-between bg-bone">
-      <div className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] h-auto min-h-screen py-8" >
-
-        {/* Profile */}
-        <div className="flex flex-row justify-start gap-3 items-center mt-20" >
-          {/* <div className='mobilel:hidden' >
-            <Image src="/images/profile.png" alt="Jorge Martínez" width={60} height={60} />
-          </div>
-          <div className="flex flex-col gap-0 mobilel:hidden" >
-            <h2 className={`${circularBold.className} font-circularBold text-2xl text-zeus`} >Jorge Martínez</h2>
-            <p className={`font-lato tracking-wide  text-dawn`} >Mobile & Web Development</p>
-          </div> */}
-        </div>
-
+      <div className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] min-h-screen py-8" >
         {/* Content */}
-        <div className="mt-10 rounded-3xl bg-darkGreen p-4 sm:p-8 relative overflow-hidden mb-20">
+        <div className="mt-36 rounded-3xl bg-darkGreen p-4 sm:p-8 relative overflow-hidden mb-20">
           {/* Handle bg image */}
           <div className="absolute inset-0 bg-[url('/images/background-pp.avif')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-darkGreen opacity-50"></div>
@@ -47,14 +22,14 @@ export default function Home() {
             <div className="w-full h-full bg-gradient-to-t from-darkGreen via-darkGreen/40 to-transparent"></div>
           </div>
           <TechnologiesList />
-
-          <div className='mt-10 flex xl:flex-row flex-col gap-10' >
-            <div className='flex xl:flex-col flex-col-reverse gap-10' >
-            <div className='rounded-[1.25rem] border-t border-orange-50 px-3 py-3 shadow-stone-800/30 backdrop-blur-2xl border-opacity-15 bg-stone-800 bg-opacity-80 pointer-events-auto shrink-0 shadow-2xl shadow-stone-900/80 xl:w-[25.5rem] '>
-              <div className='pb-2.5'>
+          {/* Start content */}
+          <div className='mt-10 w-[100%] relative flex xl:flex-row flex-col gap-5' >
+            {/* Start left column */}
+            <div className='flex xl:flex-col flex-col-reverse gap-5' >
+              {/* Start education card */}
+              <div className='rounded-[1.25rem] border-t border-orange-50 px-3 py-3 shadow-stone-800/30 backdrop-blur-2xl border-opacity-15 bg-stone-800 bg-opacity-80 pointer-events-auto shrink-0 shadow-2xl shadow-stone-900/80 xl:w-[25.5rem] '>
                 <h3 className={`${circular.className} text-xl text-orange-50 px-3`} >Education</h3>
-              </div>
-              <ul className='px-3'>
+                <ul className='px-3'>
                   <li className='flex flex-col justify-start py-4' >
                     <div className='flex flex-row justify-start gap-4' >
                       <div className='flex flex-row items-center' >
@@ -69,11 +44,13 @@ export default function Home() {
                     </div>
                   </li>
                 </ul>
+              {/* End education card */}
               </div>
+
+              {/* Start experience card */}
               <div className='rounded-[1.25rem] border-t border-orange-50 px-3 py-3 shadow-stone-800/30 backdrop-blur-2xl border-opacity-15 bg-stone-800 bg-opacity-80 pointer-events-auto shrink-0 shadow-2xl shadow-stone-900/80 xl:w-[25.5rem]'>
-                <div className='pb-2.5'>
-                  <h3 className={`${circular.className} text-xl text-orange-50 px-3`} >Experience</h3>
-                </div>
+                <h3 className={`${circular.className} text-xl text-orange-50 px-3`} >Experience</h3>
+
                 <ul className='px-3'>
                   <li className='flex flex-col justify-start py-4' >
                     <div className='flex flex-row justify-start gap-4' >
@@ -104,71 +81,55 @@ export default function Home() {
                       </div>
                     </div>
                     <p className={`${lato.className} text-sm text-orange-50 text-justify mt-3 text-opacity-50`} >
-                      Developed and optimized over 20 projects by implementing a clean and efficient coding approach. Increased productivity by reducing development time while maintaining great functionality.
+                      Developed and optimized over 20 websites by implementing a clean and efficient coding approach. Increased productivity by reducing development time while maintaining great functionality.
                     </p>
                   </li>
                 </ul>
               </div>
+            {/* End left column */}
             </div>
-            {/* Project */}
-              <div className='flex flex-col justify-between rounded-[1.25rem] w-full border-t border-orange-50 px-3 py-5 shadow-stone-800/30 backdrop-blur-2xl border-opacity-15 bg-stone-800 bg-opacity-80 pointer-events-auto shadow-2xl shadow-stone-900/80'>
-                <div>
-                  <div className='pb-2.5'>
-                    <h3 className={`${circular.className} text-xl text-orange-50 px-3`} >Project</h3>
-                  </div>
-                  <Link href="/hsf-app" className='w-full cursor-pointer px-3 pt-4 flex flex-col'>
-                    <div className='h-[250px] rounded-[1.25rem] flex justify-center items-center bg-dawn w-full relative overflow-hidden group hover:scale-[98%] transition-all duration-500 ease-out touch:scale-[98%]' >
-                      <Image src="/images/hsf-app.png" alt="HSF App" className='group-hover:scale-[105%] max-lg:z-10 transition-all duration-500 ease-out group-hover:rotate-[10deg] max-lg:rotate-[10deg] group-hover:translate-y-[-2%] touch:scale-[105%] touch:rotate-[10deg] touch:translate-y-[-2%]' width={130} height={130} />
-                      {cards.map((card, idx) => (
-                        <div 
-                          key={idx} 
-                          className={`absolute aspect-[2/3] bg-white w-[140px] max-md:blur-[1px] rounded-[0.75rem] shadow-md flex flex-col justify-center items-center p-4 transition-all duration-500 ease-in-out group-hover:duration-[800ms]
-                          ${card.style}
-                          ${idx === 0 ? ' max-lg:top-[10%] max-lg:left-[10%] max-lg:delay-[100ms] group-hover:top-[10%] group-hover:left-[10%] group-hover:delay-[100ms]' : ''}
-                          ${idx === 1 ? 'max-lg:top-[20%] max-lg:left-[90%] max-lg:delay-[150ms] group-hover:top-[20%] group-hover:left-[90%] group-hover:delay-[150ms]' : ''}
-                          ${idx === 2 ? 'max-lg:top-[80%] max-lg:left-[10%] max-lg:delay-[500ms] group-hover:top-[80%] group-hover:left-[10%] group-hover:delay-[500ms]' : ''}
-                          ${idx === 3 ? 'max-lg:top-[-50%] max-lg:left-[50%] max-lg:delay-[50ms] group-hover:top-[-50%] group-hover:left-[50%] group-hover:delay-[50ms]' : ''}
-                          ${idx === 4 ? 'max-lg:top-[140%] max-lg:left-[40%] max-lg:delay-[800ms] group-hover:top-[140%] group-hover:left-[40%] group-hover:delay-[800ms]' : ''}
-                          ${idx === 5 ? 'max-lg:top-[30%] max-lg:left-[5%] max-lg:delay-[250ms] group-hover:top-[30%] group-hover:left-[5%] group-hover:delay-[250ms]' : ''}
-                          ${idx === 6 ? 'max-lg:top-[70%] max-lg:left-[95%] max-lg:delay-[900ms] group-hover:top-[70%] group-hover:left-[95%] group-hover:delay-[900ms]' : ''}
-                          ${idx === 7 ? 'max-lg:top-[50%] max-lg:left-[95%] max-lg:delay-[420ms] group-hover:top-[50%] group-hover:left-[95%] group-hover:delay-[420ms]' : ''}`}
-                        >
-                          <p className='text-[8px] text-center text-dawn-50 text-opacity-80'>
-                            {card.question}
-                          </p>
-                          <Image src="/images/hsf-card-footer.svg" alt="Cards" className='absolute bottom-3' width={35} height={35} />
-                        </div>
-                      ))}
-                    </div>
-                    <div className='pt-5 flex flex-col flex-grow'>
-                      <div>
-                        <div className='flex flex-row items-center gap-2' >
-                          <h4 className={`${circular.className} text-xl text-orange-50`} >Hablemos Sin Filtro App</h4>
-                          {/* <Image src="/images/hsfp-app-icon.svg" alt="HSF App Icon" className='hover:scale-[105%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={30} height={30} /> */}
-                        </div>
-                        <p className={`${lato.className} text-sm text-orange-50 text-justify mt-3 text-opacity-60`} >
-                          A side project that I developed solo for a local brand called &quot;Hablemos Sin Filtro&quot; built with React Native, Expo and Firebase. The application consists of a card game designed to spark meaningful conversations. Currently, with around 2,500 monthly active users, the application is available for both iOS and Android.
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className='flex md:flex-row flex-col gap-5 justify-between px-3 pt-10'>
-                  <div className='flex flex-row gap-3 lg:justify-center justify-start items-center' >
-                    <Image src="/images/react-native-icon.svg" alt="React Native Icon" className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] mb-[-2px] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={21} height={21} />
-                    <Image src="/images/expo-icon.svg" alt="Apple Icon" className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={17} height={17} />
-                    <Image src="/images/firebase-icon.svg" alt="Firebase" className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={24} height={24} />
-                    <Image src="/images/apple-icon.svg" alt="Apple Icon" className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={17} height={17} />
-                    <Image src="/images/android-icon.svg" alt="Android Icon" className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={17} height={17} />
-                  </div>
-                  <Link href="/hsf-app" className="group cursor-pointer" passHref>
-                    <Button size="default" className={`${circular.className} md:w-auto px-10 cursor-pointer  w-full group hover:bg-bone text-darkGreen2 bg-bone rounded-[0.75rem] `} >
-                      <p className='mr-[-1rem] group-hover:mr-0 transition-all duration-300 ease-out'>Details</p> 
-                      <ArrowRightIcon className='w-4 h-4 ml-[0.15rem] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 ease-out' />
-                    </Button>
-                  </Link>
-                </div>
+            {/* Start right column */}
+            <div className='flex flex-col rounded-[1.25rem] w-full border-t border-orange-50 px-3 py-5 shadow-stone-800/30 backdrop-blur-2xl border-opacity-15 bg-stone-800 bg-opacity-80 pointer-events-auto shadow-2xl shadow-stone-900/80' >
+              <h3 className={`${circular.className} text-xl text-orange-50 px-3 pb-5`} >Projects</h3>
+              <div className=' h-full flex flex-col'>
+                <ProjectItem  
+                  title="Hablemos Sin Filtro App"
+                  description="A side project that I developed solo for a local brand called &quot;Hablemos Sin Filtro&quot; built with React Native, Expo and Firebase. The application consists of a card game designed to spark meaningful conversations."
+                  image={{
+                    src: "/images/hsf-app.png",
+                    alt: "Hablemos Sin Filtro App"
+                  }}
+                  link="/hsf-app"
+                  projectType='hsf'
+                  techStack={[
+                    { name: 'React Native', icon: '/images/react-native-icon.svg', size: 21 },
+                    { name: 'Expo', icon: '/images/expo-icon.svg' },
+                    { name: 'Firebase', icon: '/images/firebase-icon.svg', size: 24 },
+                    { name: 'Apple', icon: '/images/apple-icon.svg' },
+                    { name: 'Android', icon: '/images/android-icon.svg' },
+                  ]}
+                />
+                <div className='w-full h-[1px] my-5 bg-orange-50 bg-opacity-10' ></div>
+                <ProjectItem  
+                  title="Tennibot"
+                  description="At Tennibot, I led the rebuild and redesign of the Tennibot App and Website, focusing on improving user experience and functionality. My contributions included mobile and web development, IoT integration, and backend operations with Cloud Functions."
+                  image={{
+                    src: "/images/tennibot-app.png",
+                    alt: "Tennibot App"
+                  }}
+                  link="/tennibot"
+                  projectType='tennibot'
+                  techStack={[
+                    { name: 'React Native', icon: '/images/react-native-icon.svg', size: 21 },
+                    { name: 'AWS', icon: '/images/aws-icon.svg', size: 24 },
+                    { name: 'Firebase', icon: '/images/firebase-icon.svg', size: 24 },
+                    { name: 'Apple', icon: '/images/apple-icon.svg' },
+                    { name: 'Android', icon: '/images/android-icon.svg' }
+                  ]}
+                />
               </div>
+            </div>
+          {/* End content */}
           </div>
         </div>
 
