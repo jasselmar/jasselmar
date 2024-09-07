@@ -37,7 +37,7 @@ const Tennibot = () => {
               <section className="mb-12">
                 <h3 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Overview</h3>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    At Tennibot, I've worked on five projects, primarily focusing on the first two:
+                    At Tennibot, I&apos;ve worked on five projects, primarily focusing on the first two:
                 </p>
                 <ul className={`${lato.className} list-disc list-inside mb-4 text-lg text-orange-50 text-opacity-60`}>
                     <li className={listItemStyle}>
@@ -55,7 +55,7 @@ const Tennibot = () => {
                 </ul>
 
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    I've had the opportunity to contribute to all of these projects, each with a significant impact. For example, in the HYQ apps, I worked extensively with Cloud Functions, ensuring the app could handle critical backend operations smoothly. Additionally, I led the complete rebuild and redesign of the Tennibot Website, creating a more modern and efficient platform for both presentation and e-commerce. However, my primary focus has been on the Tennibot App, where I undertook a full rebuild and redesign of the Rover interface. This involved maintaining existing features, adding new functionalities, and improving the overall user experience. Here's a quick showcase of the Tennibot App:
+                    I&apos;ve had the opportunity to contribute to all of these projects, each with a significant impact. For example, in the HYQ apps, I worked extensively with Cloud Functions, ensuring the app could handle critical backend operations smoothly. Additionally, I led the complete rebuild and redesign of the Tennibot Website, creating a more modern and efficient platform for both presentation and e-commerce. However, my primary focus has been on the Tennibot App, where I undertook a full rebuild and redesign of the Rover interface. This involved maintaining existing features, adding new functionalities, and improving the overall user experience. Here&apos;s a quick showcase of the Tennibot App:
                 </p>
 
               </section>
@@ -101,7 +101,7 @@ const Tennibot = () => {
               <section className="mb-6">
                 <h3 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Contributions</h3>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    Some interesting challenges I've encountered and solved include:
+                    Some interesting challenges I&apos;ve encountered and solved include:
                 </p>
                 <ul className={`${lato.className} list-disc list-inside text-lg text-orange-50 text-opacity-60`}>
                     <li className={listItemStyle}>

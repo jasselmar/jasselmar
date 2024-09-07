@@ -94,9 +94,12 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), function({ addVariant }) {
-    addVariant('touch', '@media (hover: none) { &:active }')
-  } ],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addVariant }: { addVariant: (name: string, definition: string) => void }) {
+      addVariant('touch', '@media (hover: none) { &:active }')
+    }
+  ],
 } satisfies Config
 
 export default config

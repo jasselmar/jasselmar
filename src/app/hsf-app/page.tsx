@@ -37,7 +37,7 @@ export default function HSFApp() {
               <section className="mb-12">
                 <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Overview</h2>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60`}>
-                  This project is a fun playground for me to develop my current skills and experiment with new technologies/approaches I want to understand on a practical level. Having active users is a plus because it adds responsibility and the commitment of maintaining a good user experience while I'm experimenting. Here's a quick showcase and some of my takeaways:
+                  This project is a fun playground for me to develop my current skills and experiment with new technologies/approaches I want to understand on a practical level. Having active users is a plus because it adds responsibility and the commitment of maintaining a good user experience while I&apos;m experimenting. Here&apos;s a quick showcase and some of my takeaways:
                 </p>
               </section>
 
@@ -53,7 +53,7 @@ export default function HSFApp() {
                     </video>
                   </div>
                   <p className={`${lato.className} text-lg w-[100%] text-orange-50 text-opacity-60 mb-12`}>
-                    One of first challenges I faced was implementing the Cards Management feature and I had a really great time building the animations for it. It's built with react-native-reanimated and react-native-gesture-handler, letting users drag cards around to move to the next or previous question.
+                    One of first challenges I faced was implementing the Cards Management feature and I had a really great time building the animations for it. It&apos;s built with react-native-reanimated and react-native-gesture-handler, letting users drag cards around to move to the next or previous question.
                   </p>
                 </div>
               </section>
@@ -78,37 +78,37 @@ export default function HSFApp() {
                   </video>
                 </div>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60`}>
-                  While less of a technical challenge, another enjoyable implementation was the edition's details component built with @gorhom/bottom-sheet. I didn't like the idea of having a whole screen for the little details each edition had so I went for the bottom-sheet approach as way to show the details without taking up too much space.
+                  While less of a technical challenge, another enjoyable implementation was the edition&apos;s details component built with @gorhom/bottom-sheet. I didn&apos;t like the idea of having a whole screen for the little details each edition had so I went for the bottom-sheet approach as way to show the details without taking up too much space.
                 </p>
               </section>
 
               <section className="mb-12">
                 <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Cost Efficiency</h2>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60`}>
-                Serverless solutions like Firebase and AWS are really good at offering practical tools for developers, but I learned that there needs to be additional layers of caution when using these tools for the beginning stages of small projects due to cost. To mitigate any potential challenges, I minimized reads from the database and balanced information storing between keeping users up to the date with accurate information in a performant way while staying within Firebase's free tier. So far, so good! It's all been revenue since launch, but it was definitely worth taking the time to plan to ensure cost effectiveness as the app continues to scale.
+                Serverless solutions like Firebase and AWS are really good at offering practical tools for developers, but I learned that there needs to be additional layers of caution when using these tools for the beginning stages of small projects due to cost. To mitigate any potential challenges, I minimized reads from the database and balanced information storing between keeping users up to the date with accurate information in a performant way while staying within Firebase&apos;s free tier. So far, so good! It&apos;s all been revenue since launch, but it was definitely worth taking the time to plan to ensure cost effectiveness as the app continues to scale.
                 </p>
               </section>
 
               <section className="mb-6">
                 <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Takeaways</h2>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                  Unfortunately, something did catch me off guard. My initial projections were quite conservative, and I didn't anticipate much growth. However, as the local brand gained traction, there was a noticeable increase in usage. At one point, the increase was clearly too much and didn't seem organic at all, which turned out to be a bot attack. I underestimated the need for robust protection against such threats.
+                  Unfortunately, something did catch me off guard. My initial projections were quite conservative, and I didn&apos;t anticipate much growth. However, as the local brand gained traction, there was a noticeable increase in usage. At one point, the increase was clearly too much and didn&apos;t seem organic at all, which turned out to be a bot attack. I underestimated the need for robust protection against such threats.
                 </p>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
                   After an intense day of identifying, confirming, and mitigating the attack, I developed a crisis management plan:
                 </p>
                 <ul className={`${lato.className} list-disc list-inside mb-4 text-lg text-orange-50 text-opacity-60`}>
-                  <li className='mb-2' >Implemented Firebase's App Check to help us protect our backend services from abuse by preventing unauthorized clients from accessing the resources.</li>
+                  <li className='mb-2' >Implemented Firebase&apos;s App Check to help us protect our backend services from abuse by preventing unauthorized clients from accessing the resources.</li>
                   <li className='mb-2' >Made the initial screen dynamic based on a Firebase feature called Remote Config that would allow me to temporarily disable the usage of the app and/or enforce the update of the application to prevent the usage of a compromised version.</li>
                 </ul>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60`}>
-                  While it wasn't an ideal situation, I learned that even small projects can be vulnerable to abuse, and it's essential to have protective measures in place if your project is live.
+                  While it wasn&apos;t an ideal situation, I learned that even small projects can be vulnerable to abuse, and it&apos;s essential to have protective measures in place if your project is live.
                 </p>
               </section>
 
               <section className='border-t border-orange-50 border-opacity-10 pt-6'>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                  This project is very much an ongoing journey. There's always a new technology to experiment with and lessons to be learned along the way. Whether it's refining the user experience, exploring practical solutions, or navigating unexpected challenges. Mistakes will happen, but they're part of the process, and each one brings valuable insights that make the project and my developing experience better.
+                  This project is very much an ongoing journey. There&apos;s always a new technology to experiment with and lessons to be learned along the way. Whether it&apos;s refining the user experience, exploring practical solutions, or navigating unexpected challenges. Mistakes will happen, but they&apos;re part of the process, and each one brings valuable insights that make the project and my developing experience better.
                 </p>
               </section>
 
