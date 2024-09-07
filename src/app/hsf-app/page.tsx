@@ -14,7 +14,7 @@ export default function HSFApp() {
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between bg-bone my-20">
-        <div className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] h-auto min-h-screen py-8">
+        <article className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] h-auto min-h-screen py-8">
           <div className="mt-10 rounded-3xl bg-darkGreen p-4 sm:p-8 relative overflow-hidden">
             {/* Handle bg image */}
             {/* <div className="absolute inset-0 bg-[url('/images/background-pp.avif')] bg-cover bg-center"></div> */}
@@ -24,13 +24,15 @@ export default function HSFApp() {
             </div>
 
             <div className="relative px-1.5 py-3 ">
-              <Link href="/" passHref>
-                <ArrowLeftIcon className='text-orange-50 mb-10  w-8 h-8 mr-[0.15rem] group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' />
-              </Link>
-              <div className='flex flex-row items-center gap-5 mb-8' >
+              <nav aria-label="Back to home">
+                <Link href="/" passHref>
+                  <ArrowLeftIcon className='text-orange-50 mb-10 w-8 h-8 mr-[0.15rem] group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' aria-label="Back to home" />
+                </Link>
+              </nav>
+              <header className='flex flex-row items-center gap-5 mb-8' >
                 <h1 className={`${circularBold.className} sm:text-4xl text-3xl text-orange-50`}>Hablemos Sin Filtro</h1>
                 <Image src="/images/hsfp-app-icon.svg" alt="HSF App Icon" className='hover:scale-[105%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={30} height={30} />
-              </div>
+              </header>
               
               <section className="mb-12">
                 <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Overview</h2>
@@ -51,7 +53,7 @@ export default function HSFApp() {
                     </video>
                   </div>
                   <p className={`${lato.className} text-lg w-[100%] text-orange-50 text-opacity-60 mb-12`}>
-                    One of first challenges I faced was implementing the Cards Management feature and I had a really great time building the animations for it. It’s built with react-native-reanimated and react-native-gesture-handler, letting users drag cards around to move to the next or previous question.
+                    One of first challenges I faced was implementing the Cards Management feature and I had a really great time building the animations for it. It's built with react-native-reanimated and react-native-gesture-handler, letting users drag cards around to move to the next or previous question.
                   </p>
                 </div>
               </section>
@@ -83,14 +85,14 @@ export default function HSFApp() {
               <section className="mb-12">
                 <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Cost Efficiency</h2>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60`}>
-                Serverless solutions like Firebase and AWS are really good at offering practical tools for developers, but I learned that there needs to be additional layers of caution when using these tools for the beginning stages of small projects due to cost. To mitigate any potential challenges, I minimized reads from the database and balanced information storing between keeping users up to the date with accurate information in a performant way while staying within Firebase’s free tier. So far, so good! It’s all been revenue since launch, but it was definitely worth taking the time to plan to ensure cost effectiveness as the app continues to scale.
+                Serverless solutions like Firebase and AWS are really good at offering practical tools for developers, but I learned that there needs to be additional layers of caution when using these tools for the beginning stages of small projects due to cost. To mitigate any potential challenges, I minimized reads from the database and balanced information storing between keeping users up to the date with accurate information in a performant way while staying within Firebase's free tier. So far, so good! It's all been revenue since launch, but it was definitely worth taking the time to plan to ensure cost effectiveness as the app continues to scale.
                 </p>
               </section>
 
               <section className="mb-6">
                 <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Takeaways</h2>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                  Unfortunately, something did catch me off guard. My initial projections were quite conservative, and I didn’t anticipate much growth. However, as the local brand gained traction, there was a noticeable increase in usage. At one point, the increase was clearly too much and didn't seem organic at all, which turned out to be a bot attack. I underestimated the need for robust protection against such threats.
+                  Unfortunately, something did catch me off guard. My initial projections were quite conservative, and I didn't anticipate much growth. However, as the local brand gained traction, there was a noticeable increase in usage. At one point, the increase was clearly too much and didn't seem organic at all, which turned out to be a bot attack. I underestimated the need for robust protection against such threats.
                 </p>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
                   After an intense day of identifying, confirming, and mitigating the attack, I developed a crisis management plan:
@@ -100,27 +102,27 @@ export default function HSFApp() {
                   <li className='mb-2' >Made the initial screen dynamic based on a Firebase feature called Remote Config that would allow me to temporarily disable the usage of the app and/or enforce the update of the application to prevent the usage of a compromised version.</li>
                 </ul>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60`}>
-                  While it wasn’t an ideal situation, I learned that even small projects can be vulnerable to abuse, and it's essential to have protective measures in place if your project is live.
+                  While it wasn't an ideal situation, I learned that even small projects can be vulnerable to abuse, and it's essential to have protective measures in place if your project is live.
                 </p>
               </section>
 
               <section className='border-t border-orange-50 border-opacity-10 pt-6'>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                  This project is very much an ongoing journey. There’s always a new technology to experiment with and lessons to be learned along the way. Whether it's refining the user experience, exploring practical solutions, or navigating unexpected challenges. Mistakes will happen, but they’re part of the process, and each one brings valuable insights that make the project and my developing experience better.
+                  This project is very much an ongoing journey. There's always a new technology to experiment with and lessons to be learned along the way. Whether it's refining the user experience, exploring practical solutions, or navigating unexpected challenges. Mistakes will happen, but they're part of the process, and each one brings valuable insights that make the project and my developing experience better.
                 </p>
               </section>
 
-              <div className="mt-12">
+              <nav className="mt-12" aria-label="Back to home">
                 <Link href="/" passHref>
                   <Button size="default" className={`${circular.className} group hover:bg-bone text-darkGreen2 bg-bone rounded-[0.75rem]`}>
                     <ArrowLeftIcon className='w-4 h-4 mr-[0.15rem] opacity-0 group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' />
-                    <p className='ml-[-1rem] group-hover:ml-0 transition-all duration-300 ease-out'>Home</p>
+                    <span className='ml-[-1rem] group-hover:ml-0 transition-all duration-300 ease-out'>Home</span>
                   </Button>
                 </Link>
-              </div>
+              </nav>
             </div>
           </div>
-        </div>
+        </article>
       </main>
     </>
   );

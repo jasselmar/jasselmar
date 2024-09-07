@@ -30,7 +30,7 @@ const Header = () => {
                     <Image src="/images/profile.png" alt="Jorge Martínez" width={60} height={60} />
                 </div>
                 <div className="flex-col gap-0 flex" >
-                    <h2 className={`${circularBold.className} font-circularBold text-2xl text-zeus`} >JM</h2>
+                    <h2 className={`${circularBold.className} font-circularBold text-2xl text-zeus`} >Jorge <span className="hidden mobilel:inline-flex">Martínez</span></h2>
                     <p className={`font-lato tracking-wide mobilel:text-md text-xs text-dawn`} >Mobile - Web</p>
                 </div>
             </Link>
@@ -46,7 +46,7 @@ const Header = () => {
                     </div>
                 </a>
                 <a 
-                    href="https://drive.google.com/file/d/10pG2Pv5ood78b3TiEOi7CohGlHnSGwML/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Ou8jXlvH4elMbmti0rYiRaonIUnX8tlt/view?usp=sharing"
                     target="_blank"
                     className="group relative cursor-pointer inline-flex max-h-[3.75rem] items-center justify-center overflow-hidden rounded-2xl px-5 py-4 text-lg font-bold outline-none transition duration-300 bg-stone-800 bg-opacity-5"
                 >

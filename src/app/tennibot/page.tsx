@@ -15,7 +15,8 @@ const Tennibot = () => {
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between bg-bone my-20">
-        <div className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] h-auto min-h-screen py-8">
+        <article className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] h-auto min-h-screen py-8">
+          <h1 className={`${circularBold.className} sr-only`}>Tennibot Projects and Contributions</h1>
           <div className="mt-10 rounded-3xl bg-darkGreen p-4 sm:p-8 relative overflow-hidden">
             {/* Handle bg image */}
             {/* <div className="absolute inset-0 bg-[url('/images/background-pp.avif')] bg-cover bg-center"></div> */}
@@ -26,17 +27,17 @@ const Tennibot = () => {
 
             <div className="relative px-1.5 py-3 ">
                 <Link href="/" passHref>
-                  <ArrowLeftIcon className='text-orange-50 mb-10  w-8 h-8 mr-[0.15rem] group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' />
+                  <ArrowLeftIcon className='text-orange-50 mb-10  w-8 h-8 mr-[0.15rem] group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' aria-label="Back to Home" />
                 </Link>
               <div className='flex flex-row md:items-center gap-5 mb-8' >
-                <h1 className={`${circularBold.className} text-4xl text-orange-50`}>Tennibot</h1>
+                <h2 className={`${circularBold.className} text-4xl text-orange-50`}>Tennibot</h2>
                 <Image src="/images/tennibot-icon.svg" alt="Tennibot App Icon" className='hover:scale-[105%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={30} height={30} />
               </div>
               
               <section className="mb-12">
-                <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Overview</h2>
+                <h3 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Overview</h3>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    At Tennibot, I’ve worked on five projects, primarily focusing on the first two:
+                    At Tennibot, I've worked on five projects, primarily focusing on the first two:
                 </p>
                 <ul className={`${lato.className} list-disc list-inside mb-4 text-lg text-orange-50 text-opacity-60`}>
                     <li className={listItemStyle}>
@@ -54,15 +55,15 @@ const Tennibot = () => {
                 </ul>
 
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    I've had the opportunity to contribute to all of these projects, each with a significant impact. For example, in the HYQ apps, I worked extensively with Cloud Functions, ensuring the app could handle critical backend operations smoothly. Additionally, I led the complete rebuild and redesign of the Tennibot Website, creating a more modern and efficient platform for both presentation and e-commerce. However, my primary focus has been on the Tennibot App, where I undertook a full rebuild and redesign of the Rover interface. This involved maintaining existing features, adding new functionalities, and improving the overall user experience. Here’s a quick showcase of the Tennibot App:
+                    I've had the opportunity to contribute to all of these projects, each with a significant impact. For example, in the HYQ apps, I worked extensively with Cloud Functions, ensuring the app could handle critical backend operations smoothly. Additionally, I led the complete rebuild and redesign of the Tennibot Website, creating a more modern and efficient platform for both presentation and e-commerce. However, my primary focus has been on the Tennibot App, where I undertook a full rebuild and redesign of the Rover interface. This involved maintaining existing features, adding new functionalities, and improving the overall user experience. Here's a quick showcase of the Tennibot App:
                 </p>
 
               </section>
 
               <section className="">
-                <h2 className={`${circular.className} text-2xl text-orange-50 mb-6`}>
+                <h3 className={`${circular.className} text-2xl text-orange-50 mb-6`}>
                   Good<FlipWords className='text-orange-50' words={["looking", "feeling"]} />
-                </h2>
+                </h3>
                 <div className='flex flex-col gap-4' >
                   <div className="bg-dawn bg-opacity-80 w-full relative rounded-[1.25rem] h-[20rem] group hover:scale-[98%] transition-all duration-300 ease-out flex items-center justify-center mb-4">
                     <video className='overflow-hidden h-[90%] fit rounded-[0.5rem] group-hover:scale-[105%] transition-all duration-300 ease-out'  playsInline webkit-playsinline="true" muted autoPlay loop>
@@ -98,9 +99,9 @@ const Tennibot = () => {
               </section>
 
               <section className="mb-6">
-                <h2 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Contributions</h2>
+                <h3 className={`${circular.className} text-2xl text-orange-50 mb-4`}>Contributions</h3>
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    Some interesting challenges I’ve encountered and solved include:
+                    Some interesting challenges I've encountered and solved include:
                 </p>
                 <ul className={`${lato.className} list-disc list-inside text-lg text-orange-50 text-opacity-60`}>
                     <li className={listItemStyle}>
@@ -124,17 +125,17 @@ const Tennibot = () => {
                 </p>
               </section>
 
-              <div className="mt-12">
+              <nav className="mt-12">
                 <Link href="/" passHref>
                   <Button size="default" className={`${circular.className} group hover:bg-bone text-darkGreen2 bg-bone rounded-[0.75rem]`}>
                     <ArrowLeftIcon className='w-4 h-4 mr-[0.15rem] opacity-0 group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-300 ease-out' />
                     <p className='ml-[-1rem] group-hover:ml-0 transition-all duration-300 ease-out'>Home</p>
                   </Button>
                 </Link>
-              </div>
+              </nav>
             </div>
           </div>
-        </div>
+        </article>
       </main>
     </>
   )

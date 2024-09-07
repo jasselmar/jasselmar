@@ -25,6 +25,7 @@ const config = {
         tablet: "1024px",
         mobilel: "425px",
         xs: "320px",
+        xsm: "330px"
       },
       fontFamily: {
         circularBlack: ['var(--font-circularBlack)'],
