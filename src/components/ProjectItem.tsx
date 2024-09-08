@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { lato, circular } from "@/app/utils/fonts";
 import { Button } from './ui/button';
 import { ArrowRightIcon } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 
 const cards = [
   { question: '¿Cual es el viaje de tus sueños?', style: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-0' },
@@ -42,7 +43,7 @@ export default function ProjectItem({ title, description, image, link, projectTy
     }, []);
 
     if (!isClient) {
-        return null; // or a loading spinner
+        return null; // TODO: Add skeleton or a loading spinner
     }
     return (
         <Link href={link} className='w-full group transition-all duration-300 ease-out hover:bg-orange-50 pl-3 pr-5 hover:bg-opacity-5 sm:flex-row flex-col cursor-pointer h-[45%] py-3 gap-4 rounded-[1.25rem] flex'>
@@ -103,11 +104,20 @@ export default function ProjectItem({ title, description, image, link, projectTy
             </div>
             <div className='flex sm:flex-row sm:pt-2.5 pt-10 flex-col sm:items-center gap-5 justify-between px-0'>
                 <div className='flex flex-row gap-3 justify-start items-center' >
-                    {techStack.map((tech, idx) => {
-                        return (
-                            <Image key={idx} src={tech.icon} alt={tech.name} className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] mb-[-2px] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={tech.size ?? 17} height={tech.size ?? 17} />
-                        )
-                    })}
+                    <TooltipProvider>
+                        {techStack.map((tech, idx) => {
+                            return (
+                                <Tooltip key={idx}>
+                                    <TooltipTrigger>
+                                        <Image src={tech.icon} alt={tech.name} className='hover:[filter:none] [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(100%)_contrast(100%)] mb-[-2px] hover:scale-[110%] transition-all duration-500 ease-out hover:translate-y-[-2%]' width={tech.size ?? 17} height={tech.size ?? 17} />
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p>{tech.name}</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            )
+                        })}
+                    </TooltipProvider>
                 </div>
                 <Link href={link} className="group cursor-pointer sm:hidden" passHref>
                     <Button size="default" className={`${circular.className} sm:w-auto cursor-pointer w-full group sm:bg-transparent bg-bone text-zeus rounded-[0.75rem] `} >

@@ -32,7 +32,7 @@ export default function Home() {
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between bg-bone">
         <div className="w-full px-4 sm:px-0 sm:w-[90%] md:w-[80%] lg:max-w-[70%] min-h-screen py-8" >
-          <section className="sm:mt-36 mt-24 rounded-3xl bg-darkGreen p-4 sm:p-8 relative overflow-hidden mb-20">
+          <section className="sm:mt-36 mt-24 rounded-3xl bg-darkGreen p-4 pb-5 sm:p-8 relative overflow-hidden mb-20">
             {/* Handle bg image */}
             <div className="absolute inset-0 bg-[url('/images/background-pp.avif')] bg-cover bg-center"></div>
             <div className="absolute inset-0 bg-darkGreen opacity-50"></div>
@@ -103,7 +103,7 @@ export default function Home() {
                 <div className=' h-full flex flex-col'>
                   <ProjectItem  
                     title="Hablemos Sin Filtro App"
-                    description="A side project that I developed solo for a local brand called &quot;Hablemos Sin Filtro&quot; built with React Native, Expo and Firebase. The application consists of a card game designed to spark meaningful conversations."
+                    description="A side project that I developed solo for a local brand called &quot;Hablemos Sin Filtro&quot; built with React Native, Expo and Firebase. It currently has 2.5k monthly active users and has generated over $15k in revenue."
                     image={{
                       src: "/images/hsf-app.png",
                       alt: "Hablemos Sin Filtro App"
@@ -111,7 +111,7 @@ export default function Home() {
                     link="/hsf-app"
                     projectType='hsf'
                     techStack={[
-                      { name: 'React Native', icon: '/images/react-native-icon.svg', size: 21 },
+                      { name: 'React Native, React', icon: '/images/react-native-icon.svg', size: 21 },
                       { name: 'Expo', icon: '/images/expo-icon.svg' },
                       { name: 'Firebase', icon: '/images/firebase-icon.svg', size: 24 },
                       { name: 'Apple', icon: '/images/apple-icon.svg' },
