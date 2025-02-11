@@ -53,7 +53,7 @@ export default function HSFApp() {
                     </video>
                   </div>
                   <p className={`${lato.className} text-lg w-[100%] text-orange-50 text-opacity-60 mb-12`}>
-                    One of first challenges I faced was implementing the Cards Management feature and I had a really great time building the animations for it. It&apos;s built with react-native-reanimated and react-native-gesture-handler, letting users drag cards around to move to the next or previous question.
+                    One of the first challenges I faced was implementing the Cards Management feature and I had a really great time building the animations for it. It&apos;s built with react-native-reanimated and react-native-gesture-handler, letting users drag cards around to move to the next or previous question.
                   </p>
                 </div>
               </section>
