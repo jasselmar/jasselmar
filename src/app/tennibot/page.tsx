@@ -41,7 +41,7 @@ const Tennibot = () => {
                 </p>
                 <ul className={`${lato.className} list-disc list-inside mb-4 text-lg text-orange-50 text-opacity-60`}>
                     <li className={listItemStyle}>
-                        <span className={`${circularBold.className} text-orange-50 text-opacity-90`}>Tennibot App</span>: The interface between the Rover/Station and the user, built with React Native, TypeScript, and AWS.
+                        <span className={`${circularBold.className} text-orange-50 text-opacity-90`}>Tennibot App</span>: The interface between the Rover, Station, and Partner (smart ball machine) and the user, built with React Native, TypeScript, and AWS.
                     </li>
                     <li className={listItemStyle}>
                         <span className={`${circularBold.className} text-orange-50 text-opacity-90`}>Tennibot Website</span>: A presentational website and e-commerce platform, built with Astro, ReactJS, and Sanity, and deployed on Netlify.
@@ -55,9 +55,26 @@ const Tennibot = () => {
                 </ul>
 
                 <p className={`${lato.className} text-lg text-orange-50 text-opacity-60 mb-4`}>
-                    I&apos;ve had the opportunity to contribute to all of these projects, each with a significant impact. For example, in the HYQ apps, I worked extensively with Cloud Functions, ensuring the app could handle critical backend operations smoothly. Additionally, I led the complete rebuild and redesign of the Tennibot Website, creating a more modern and efficient platform for both presentation and e-commerce. However, my primary focus has been on the Tennibot App, where I undertook a full rebuild and redesign of the Rover interface. This involved maintaining existing features, adding new functionalities, and improving the overall user experience. Here&apos;s a quick showcase of the Tennibot App:
+                    I&apos;ve had the opportunity to contribute to all of these projects, each with a significant impact. For example, in the HYQ apps, I worked extensively with Cloud Functions, ensuring the app could handle critical backend operations smoothly. Additionally, I led the complete rebuild and redesign of the Tennibot Website, creating a more modern and efficient platform for both presentation and e-commerce. However, my primary focus has been on the Tennibot App. Recently, I led the integration of Partner—a second robot type (smart ball machine) into the app. This involved building the drill configuration UI and data models, the real-time control protocol for sending drill sequences to the machine, and state sync between app and robot. I also implemented multi-sport support (pickleball and padel alongside tennis), adapting the court mapping logic for different dimensions and coordinate systems. I undertook a full rebuild and redesign of the Rover interface for ball collection as well. Here&apos;s a quick showcase of the Tennibot App:
                 </p>
 
+              </section>
+
+              <section className="mb-12">
+                <h3 className={`${circular.className} text-2xl text-orange-50 mb-6`}>
+                  Partner: Custom Drills & Autonomous Play
+                </h3>
+                <div className='flex flex-col gap-4' >
+                  <div className="bg-dawn bg-opacity-80 w-full relative rounded-[1.25rem] h-[20rem] group hover:scale-[98%] transition-all duration-300 ease-out flex items-center justify-center mb-4">
+                    <video className='overflow-hidden h-[90%] fit rounded-[0.5rem] group-hover:scale-[105%] transition-all duration-300 ease-out'  playsInline webkit-playsinline="true" muted autoPlay loop>
+                      <source src="/videos/custom-drills.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className={`${lato.className} text-lg w-[100%] text-orange-50 text-opacity-60 mb-4`}>
+                  I led the app integration for Partner as a second robot type. This involved building the drill configuration UI and data models, the real-time control protocol for sending drill sequences to the machine, and state synchronization between the app and robot. I also implemented multi-sport support—adding pickleball and padel alongside tennis—which required adapting the court mapping logic for different dimensions and coordinate systems so drills render and execute correctly across all three sports.
+                  </p>
+                </div>
               </section>
 
               <section className="">
@@ -72,17 +89,8 @@ const Tennibot = () => {
                     </video>
                   </div>
                   <p className={`${lato.className} text-lg w-[100%] text-orange-50 text-opacity-60 mb-12`}>
-                  The Autonomous screen is the most frequently used, offering access to nearly every Rover feature. It allows users to select cleaning areas, start/stop navigation, view real-time positioning, control the Rover remotely, relocate it, and more.
+                  The Autonomous screen is the most frequently used for the Rover (ball collection robot), offering access to nearly every Rover feature. It allows users to select cleaning areas, start/stop navigation, view real-time positioning, control the Rover remotely, relocate it, and more.
                   </p>
-                </div>
-              </section>
-
-              <section className="flex flex-col gap-4 mb-12">
-                <div className="bg-dawn bg-opacity-80 w-full relative rounded-[1.25rem] h-[20rem] group hover:scale-[98%] transition-all duration-300 ease-out flex items-center justify-center mb-4">
-                  <video className='overflow-hidden h-[90%] fit rounded-[0.5rem] group-hover:scale-[105%] transition-all duration-300 ease-out'  playsInline webkit-playsinline="true" muted autoPlay loop>
-                    <source src="/videos/restricted-zones-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
                 </div>
               </section>
 
@@ -104,6 +112,9 @@ const Tennibot = () => {
                     Some interesting challenges I&apos;ve encountered and solved include:
                 </p>
                 <ul className={`${lato.className} list-disc list-inside text-lg text-orange-50 text-opacity-60`}>
+                    <li className={listItemStyle}>
+                        Supporting multiple racquet sports (tennis, pickleball, padel) with sport-specific court mapping and coordinate systems.
+                    </li>
                     <li className={listItemStyle}>
                         Managing multiple communication clients/protocols simultaneously and integrating them with the app lifecycle.
                     </li>

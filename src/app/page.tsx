@@ -76,7 +76,7 @@ export default function Home() {
                         </div>
                       </div>
                       <p className={`${lato.className} text-sm text-orange-50 text-justify mt-3 text-opacity-60`} >
-                        Developing a cross-platform mobile app that serves as the interface for controlling Tennibot&apos;s Rover, an autonomous tennis ball collector, and the Station, which collects and provides stats of the game. The app provides real-time updates and seamless robot management, enhancing the experience of playing tennis.
+                        Developing a cross-platform mobile app that serves as the control interface for Tennibot’s autonomous tennis robots, including Partner, a smart ball machine capable of executing custom drills and autonomous play. The app enables real-time robot control, drill configuration, and performance tracking via Station analytics.
                       </p>
                     </li>
                     <li className='flex flex-col justify-start py-4 border-t border-orange-50 border-opacity-10' >
