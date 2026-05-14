@@ -76,7 +76,7 @@ export default function Home() {
                         </div>
                       </div>
                       <p className={`${lato.className} text-sm text-orange-50 text-justify mt-3 text-opacity-60`} >
-                        Developing a cross-platform mobile app that serves as the control interface for Tennibot’s autonomous tennis robots, including Partner, a smart ball machine capable of executing custom drills and autonomous play. The app enables real-time robot control, drill configuration, and performance tracking via Station analytics.
+                        At Tennibot, I build mobile and web experiences for autonomous racquet-sports robots. My main focus is the React Native app that serves as the control interface for Rover, Partner, and Station, enabling users to configure drills, control robots in real time, monitor robot states, and access Station-powered analytics. I’ve worked on core features such as live robot position mapping, connection lifecycle handling, firmware update management, and cloud-backed product flows, while also contributing to React-based web apps and user-facing product interfaces.
                       </p>
                     </li>
                     <li className='flex flex-col justify-start py-4 border-t border-orange-50 border-opacity-10' >
